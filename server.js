@@ -12,12 +12,12 @@ const router = express.Router()
 const ark = (req, res, next) => {
   const { originalUrl } = req
 
-  // Matches /ark:/NAAN/Name[Qualifier]
+  // Matches /ark:/(NAAN)/(Name)/(Qualifier)
   const URI = /^\/ark:\/(\d+)\/(\d+)\/(\?+)$/
   const identifiers = originalUrl.match(URI)
 
   if (identifiers) {
-    // re: qualifier - you'll need to do some checks here for '' '?' vs. '??'
+    // re: qualifier - you'll need to do some checks here for '' vs. '?' vs. '??'
     const [, naan, name, qualifier] = identifiers
     res.json({
       naan,
