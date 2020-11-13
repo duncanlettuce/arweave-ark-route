@@ -1,0 +1,19 @@
+{
+  "name": "arweave-ark-route",
+  "version": "0.1.0",
+  "description": "Route-matching for colon and question marks (re: ARK compatibility)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donald Geddes",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2",
+    "standard": "^16.0.2"
+  }
+}
