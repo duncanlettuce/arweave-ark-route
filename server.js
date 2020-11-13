@@ -34,12 +34,11 @@ const ark = (req, res, next) => {
 /**
  * Anything that doesn't match an ARK URI will be funneled here
  */
-const failover = router.use('*', (req, res) => {
+const failover = (req, res) =>
   res.status(400).json({
     originalMatch: req.originalUrl,
     parsedMatch: req.url,
   })
-})
 
 server.use('*', ark, failover)
 
