@@ -13,6 +13,7 @@ const ark = (req, res, next) => {
   const { originalUrl } = req
 
   // Matches /ark:/(NAAN)/(Name)/(Qualifier)
+  // Note: NAAN & Name match only numbers at the mo
   const URI = /^\/ark:\/(\d+)\/(\d+)\/(\?+)$/
   const identifiers = originalUrl.match(URI)
 
